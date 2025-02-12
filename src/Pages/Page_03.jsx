@@ -8,7 +8,7 @@ function Page_03() {
 
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/pdf/hehe.pdf'; // Replace with the actual path to your PDF file
+        link.href = '/pdf/hehe.pdf'; 
         link.download = 'file.pdf';
         link.click();
     };
