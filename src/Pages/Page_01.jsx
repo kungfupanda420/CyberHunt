@@ -8,9 +8,9 @@ function Page_01() {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-       // e.preventDefault(); // Prevent the default form submission behavior
-      //  const expectedValue = process.env.REACT_APP_KEY1;
-        if (inputValue === 'eqfo') {
+        e.preventDefault(); // Prevent the default form submission behavior
+        const expectedValue = import.meta.env.VITE_APP_KEY1; // Ensure this is set in your .env file
+        if (inputValue === expectedValue) {
             setMessage('Correct!');
             navigate('/page_02'); // Redirect to Page_02
         } else {
@@ -20,7 +20,6 @@ function Page_01() {
 
     return (
         <>
-        {}
             <div className="Page">
                 <p>"this is text" is written as "vjku ku vgz"</p>
                 <p>so what is "codm" is called?</p>

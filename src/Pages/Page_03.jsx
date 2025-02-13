@@ -15,8 +15,8 @@ function Page_03() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-      //  const expectedValue = process.env.REACT_APP_KEY2; // Ensure this is set in your .env file
-        if (inputValue === 'kungfupanda') {
+        const expectedValue = import.meta.env.VITE_APP_KEY2; // Ensure this is set in your .env file
+        if (inputValue === expectedValue) {
             setMessage('Correct!');
             navigate('/page_04'); // Redirect to Page_04
         } else {
@@ -26,9 +26,7 @@ function Page_03() {
 
     return (
         <div>
-           <p>give me the author name of this book
-            
-           </p>
+           <p>give me the author name of this book</p>
             <button onClick={handleDownload}>Download PDF</button>
             <form onSubmit={handleSubmit}>
                 <input

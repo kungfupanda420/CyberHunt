@@ -15,7 +15,7 @@ function Main() {
     <div>
       {location.pathname === "/" && (
         <>
-          <h1>Welcome to My App</h1>
+          <h1>Cyber Hunt 2K24</h1>
           <Link to="/page_01">
             <button>Home</button>
           </Link>
